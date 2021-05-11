@@ -1,0 +1,23 @@
+- Các thẻ html thì sắp xếp xếp theo dạng block hoặc thẻ inline block
+- muốn thay đổi nội dung thẻ html thì phải trỏ đến được nó - document.getElementById('tên-id')
+	- Thay đổi nội dung
+		- Với thẻ đóng(<p>inner</p>) - innerText,innerHTML
+
+	- Thay đổi hiển thị
+		- Màu chữ, kích cỡ 
+		- Màu nền
+	- Thay đổi được giá trị thuộc tính của thẻ HTML
+
+	- Và để kiểm soát sự thay đổi theo ý mình, ta cho các câu lệnh thay đổi vào hàm(function)
+
+	- Các sự kiện có thể nằm trên mọi thẻ html:
+		- onclick
+		- onchange
+		- oninput
+		- onmouseout
+		- onmouseover
+		.......
+
+	- Nhập giá trị từ bàn phím: prompt
+	- InnerText chỉ nhận được nội dung
+	- InnerHTML thì nhận được thẻ html

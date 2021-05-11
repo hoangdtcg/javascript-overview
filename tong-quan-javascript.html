@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tổng quan JavaScript</title>
+</head>
+<body style="position: relative">
+<input type="text" id="input-left" placeholder="left" oninput="displayCat()">
+<input type="text" id="input-top" placeholder="top" oninput="displayCat()">
+<!--<button onclick="displayCat()">Run</button>-->
+<!--<h1 onmouseover="changeHtml()" id="title">Hà Nội mùa Covid thứ 2</h1>
+<p>Mùa hè tháng 5</p>
+<p>Điều hoà thì hơi lạnh</p>
+<span>37*C</span>
+<a href="https://www.google.com">Google</a>
+<input id="search" type="text" placeholder="Nhập thứ bạn muốn tìm" value="google">
+<br>
+<button onmouseover="changeHtml()" onmouseout="resetHtml()">Change</button>-->
+
+<img id="cat" src="meow.jpeg" style="width:300px;position: absolute; left: 50px;top: 200px">
+<p id="my-cat">Đây là con mèo của tôi</p>
+<button onclick="changeText()">Change</button>
+</body>
+<script>
+    function changeText() {
+        document.getElementById('my-cat').innerHTML ="<strong>My Mèo</strong>";
+    }
+   //Đóng gói các câu lệnh bằng Hàm (function)
+   /*function changeHtml() {
+       document.getElementById('title').innerText = 'Hà nội mùa phải gió';
+       document.getElementById('title').style.color = 'red';
+       document.getElementById('search').value = 'doodle';
+   }
+
+
+   function resetHtml() {
+       document.getElementById('title').innerText = 'Hà nội đêm không ngủ';
+       document.getElementById('title').style.color = 'black';
+       document.getElementById('search').value = 'Nhớ em anh treo ảnh lên nóc tủ';
+   }*/
+   // let left = prompt('Nhập left');
+   // let topPos = prompt('Nhập top');
+
+   function displayCat() {
+       let left = document.getElementById('input-left').value;
+       let topPos = document.getElementById('input-top').value;
+       // left += 5; // left = left+5;
+       document.getElementById('cat').style.left = left + 'px';
+       document.getElementById('cat').style.top = topPos + 'px';
+       if(left >= window.innerWidth - 300){
+           document.getElementById('cat').src = 'cat-hurt.jpeg';
+           left = window.innerWidth - 300;
+       }
+   }
+   displayCat();
+   // setInterval(displayCat,1);
+
+   // window.addEventListener('keydown',displayCat)
+</script>
+</html>
